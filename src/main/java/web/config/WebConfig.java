@@ -35,7 +35,6 @@ public class WebConfig implements WebMvcConfigurer {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
         templateResolver.setPrefix("/WEB-INF/pages/");
-        templateResolver.setCharacterEncoding("UTF-8");
         templateResolver.setSuffix(".html");
         return templateResolver;
     }
@@ -55,9 +54,9 @@ public class WebConfig implements WebMvcConfigurer {
         resolver.setTemplateEngine(templateEngine());
         registry.viewResolver(resolver);
     }
-    @Bean
-    public List<Car> getListCars() {
-        return new CarService().findCar();
-    }
+//    @Bean
+//    public List<Car> getListCars() {
+//        return new CarService().findCar();
+//    }
 
 }
