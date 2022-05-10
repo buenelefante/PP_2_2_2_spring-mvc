@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <style>
+        .car_table {
+            width: 750px;
+            text-align: center;
+            border-collapse: collapse;
+            background: #c0e8f9;
+            margin: 7px;
+        }
+
+        .car_table th {
+            font-weight: 600;
+            background: #b8d3d1;
+            color: #ce7b91;
+            border: 1px solid #b8d3d1;
+        }
+
+        .car_table td {
+            color: #1a281f;
+            border: 1px solid #b8d3d1;
+            font-family: Raleway;
+            padding: 10px 20px;
+        }
+
+        .car_table tr:hover td {
+            background: #635255;
+            cursor: pointer;
+            color: #ffffff;
+
+        }
+    </style>
+</head>
+<body>
+<table style="width: 700px" class="car_table">
+
+    <tbody>
+    <tr>
+        <td th:text="SuperCars"></td>
+    </tr>
+    <tr>
+
+        <th>Model</th>
+        <th>Color</th>
+        <th>Year</th>
+    </tr>
+    <tr th:each="car : ${carslist}">
+
+        <td th:text="${car.getModel()}"></td>
+        <td th:text="${car.getColor()}"></td>
+        <td th:text="${car.getYear()}"></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
