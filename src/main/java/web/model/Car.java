@@ -1,20 +1,17 @@
-package model;
+package web.model;
 
 public class Car {
-
     private String model;
     private String color;
-    private String year;
+    private long year;
 
+    private String condition;
 
-    public Car() {
-    }
-
-    public Car(String model, String color, String year) {
-
+    public Car(String model, String color, long year, String condition) {
         this.model = model;
         this.color = color;
         this.year = year;
+        this.condition = condition;
     }
 
     public String getModel() {
@@ -33,11 +30,19 @@ public class Car {
         this.color = color;
     }
 
-    public String getYear() {
+    public long getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(long year) {
         this.year = year;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 }

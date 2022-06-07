@@ -47,12 +47,14 @@
         <th>Model</th>
         <th>Color</th>
         <th>Year</th>
+        <th>Condition</th>
     </tr>
-    <tr th:each="car : ${carslist}">
+    <tr th:each="car : ${cars}">
 
         <td th:text="${car.getModel()}"></td>
         <td th:text="${car.getColor()}"></td>
         <td th:text="${car.getYear()}"></td>
+        <td th:text="${car.getCondition()}"></td>
     </tr>
     </tbody>
 
